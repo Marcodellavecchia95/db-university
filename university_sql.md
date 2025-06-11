@@ -12,7 +12,7 @@ WHERE YEAR(`date_of_birth`) = 1990;
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
 
-SELECT `date_of_birth`
+SELECT `name`, `surname`
 FROM `students`
 WHERE YEAR(`date_of_birth`) <= 1995;
 
