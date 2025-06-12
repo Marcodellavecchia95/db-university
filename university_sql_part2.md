@@ -66,3 +66,10 @@ GROUP BY `teachers`.`id`;
 
 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti
    per ogni esame, stampando anche il voto massimo. Successivamente,
+
+SELECT `students`.\*, COUNT(`exam_student`.`exam_id`) AS exams_taken , MAX(`exam_student`.`vote`) AS max_vote
+FROM `students`
+INNER JOIN `exam_student`
+ON `students`.`id` = `exam_student`.`student_id`
+WHERE `exam_student`.`vote`> 18
+GROUP BY `students`.`id`;
